@@ -13,6 +13,9 @@
 		F39F6D86277ED5D000CEA5DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39F6D84277ED5D000CEA5DE /* Main.storyboard */; };
 		F39F6D88277ED5D300CEA5DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39F6D87277ED5D300CEA5DE /* Assets.xcassets */; };
 		F39F6D8B277ED5D300CEA5DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39F6D89277ED5D300CEA5DE /* LaunchScreen.storyboard */; };
+		F3C16CAE282DFF9100340B03 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C16CAD282DFF9100340B03 /* NetworkExtension.framework */; };
+		F3C16CB0282E028F00340B03 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C16CAF282E028F00340B03 /* WebKit.framework */; };
+		F3E36B7F2783F23C00E18E78 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E36B7E2783F23C00E18E78 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,10 @@
 		F39F6D87277ED5D300CEA5DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F39F6D8A277ED5D300CEA5DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F39F6D8C277ED5D300CEA5DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C16CAB282DFF9000340B03 /* EasyBrowserS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyBrowserS.entitlements; sourceTree = "<group>"; };
+		F3C16CAD282DFF9100340B03 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		F3C16CAF282E028F00340B03 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F3E36B7E2783F23C00E18E78 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C16CB0282E028F00340B03 /* WebKit.framework in Frameworks */,
+				F3C16CAE282DFF9100340B03 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,7 @@
 			children = (
 				F39F6D7D277ED5D000CEA5DE /* EasyBrowserS */,
 				F39F6D7C277ED5D000CEA5DE /* Products */,
+				F3C16CAC282DFF9100340B03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +66,7 @@
 		F39F6D7D277ED5D000CEA5DE /* EasyBrowserS */ = {
 			isa = PBXGroup;
 			children = (
+				F3C16CAB282DFF9000340B03 /* EasyBrowserS.entitlements */,
 				F39F6D7E277ED5D000CEA5DE /* AppDelegate.swift */,
 				F39F6D80277ED5D000CEA5DE /* SceneDelegate.swift */,
 				F39F6D82277ED5D000CEA5DE /* ViewController.swift */,
@@ -63,8 +74,18 @@
 				F39F6D87277ED5D300CEA5DE /* Assets.xcassets */,
 				F39F6D89277ED5D300CEA5DE /* LaunchScreen.storyboard */,
 				F39F6D8C277ED5D300CEA5DE /* Info.plist */,
+				F3E36B7E2783F23C00E18E78 /* DetailView.swift */,
 			);
 			path = EasyBrowserS;
+			sourceTree = "<group>";
+		};
+		F3C16CAC282DFF9100340B03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3C16CAF282E028F00340B03 /* WebKit.framework */,
+				F3C16CAD282DFF9100340B03 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F39F6D83277ED5D000CEA5DE /* ViewController.swift in Sources */,
+				F3E36B7F2783F23C00E18E78 /* DetailView.swift in Sources */,
 				F39F6D7F277ED5D000CEA5DE /* AppDelegate.swift in Sources */,
 				F39F6D81277ED5D000CEA5DE /* SceneDelegate.swift in Sources */,
 			);
@@ -287,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EasyBrowserS/EasyBrowserS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -314,6 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EasyBrowserS/EasyBrowserS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
